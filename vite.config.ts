@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/seamless-color-ball/',
+  base: './',
   build: {
     outDir: 'docs',
   },
