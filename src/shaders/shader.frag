@@ -80,7 +80,6 @@ void main() {
   }
 
   // green
-  if(uColor.g > uColor.r && uColor.g > uColor.b) {}
   float mixStrengthColor2 = (vElevation2 * 1.0) * 11.0;
   vec3 green = mix(vec3(0.4, 1.0, 0.2), uColor.rgb * 0.9, mixStrengthColor2);
   if(uColor.g >= 0.00001) {

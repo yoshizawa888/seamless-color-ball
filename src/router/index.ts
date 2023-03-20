@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Red from '../views/Red.vue';
+import Blue from '../views/Blue.vue';
+import Green from '../views/Green.vue';
 
 const routes = [
   {
@@ -10,18 +12,18 @@ const routes = [
   {
     path: '/blue',
     name: 'Blue',
-    component: () => import('../views/Blue.vue'),
+    component: Blue,
 
   },
   {
     path: '/green',
     name: 'Green',
-    component: () => import('../views/Green.vue'),
+    component: Green,
   },
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('/seamless-color-ball/'),
   routes,
 })
 
