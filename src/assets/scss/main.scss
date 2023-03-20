@@ -1,0 +1,81 @@
+#canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.nav {
+	min-width: 120px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	position: absolute;
+	top: 100px;
+	right: 100px;
+	@media screen and (max-width: 768px) {
+		margin: 30px auto 0;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		position: static;
+	}
+	&__link {
+		color: white;
+		font-size: 3rem;
+		position: relative;
+		@media screen and (max-width: 768px) {
+			font-size: 2rem;
+		}
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 0%;
+			height: 2px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background: white;
+			transition: 0.3s ease;
+		}
+		&:hover {
+			&::before {
+				width: 100%;
+			}
+		}
+		&.router-link-exact-active {
+			font-size: 4rem;
+			@media screen and (max-width: 768px) {
+				font-size: 3rem;
+			}
+		}
+		&:not(:last-child) {
+			margin: 0 0 15px;
+			@media screen and (max-width: 768px) {
+				margin: 0 25px 0 0;
+			}
+		}
+	}
+}
+.text {
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 5rem;
+	position: absolute;
+	bottom: 70px;
+	@media screen and (max-width: 768px) {
+		font-size: 4rem;
+	}
+}
+
+.fade-leave-to,
+.fade-enter-active {
+	transition: opacity 2s;
+	opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave-active {
+	transition: opacity 2s;
+	opacity: 1;
+}
