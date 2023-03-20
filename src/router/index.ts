@@ -23,7 +23,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/seamless-color-ball/'),
+  history: createWebHistory(),
   routes,
 })
 
