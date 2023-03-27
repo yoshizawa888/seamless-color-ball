@@ -56,6 +56,7 @@ window.addEventListener(
 	false
 );
 
+const controls = new OrbitControls(camera, renderer.domElement);
 const setControll = () => {
 	document.addEventListener(
 		'touchmove',
@@ -64,7 +65,6 @@ const setControll = () => {
 		},
 		{ passive: false }
 	);
-	const controls = new OrbitControls(camera, renderer.domElement);
 	controls.enableDamping = true;
 	controls.dampingFactor = 0.5;
 };
@@ -74,7 +74,7 @@ const render = () => {
 		render();
 	});
 	renderer.render(scene, camera);
-	// controls.value?.update();
+	controls.update();
 	const elapsedTime = clock.getElapsedTime();
 	uniform.uTime.value = elapsedTime;
 };
